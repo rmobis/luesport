@@ -1,0 +1,47 @@
+.full-form {
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		justify-content: space-between;
+		background-image: url('/img/bg.png');
+		background-size: cover;
+		background-position: center;
+		overflow-y: scroll;
+	}
+
+	.card-body {
+		padding: 15px;
+	}
+
+	.bmd-form-group {
+		&.input-form-group {
+			padding-right: 16px;
+		}
+
+		&.form-check {
+			margin: 0;
+			padding-left: 16px;
+
+			.form-check-label + button {
+				margin-left: 15px;
+			}
+
+			button + .form-check-label {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	.invalid-feedback {
+		padding-left: 56px;
+		line-height: 1;
+		margin-top: 0;
+		display: inline-block;
+	}
+
+	.user-icon {
+		font-size: 10rem;
+		padding-top: 1rem;
+	}
+}

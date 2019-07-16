@@ -1,0 +1,210 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+// @import "variables";
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+$luepink-50: #d96884;
+$luepink-100: #d95d7c;
+$luepink-200: #d95274;
+$luepink-300: #d9486c;
+$luepink-400: #d93d64;
+$luepink-500: #d9325c;
+$luepink-600: #d92753;
+$luepink-700: #da1c4b;
+$luepink-800: #d91143;
+$luepink-900: #d9073b;
+$luepink-a100: #ea80fc;
+$luepink-a200: #e040fb;
+$luepink-a400: #d500f9;
+$luepink-a700: #a0f;
+$luepink: $luepink-700;
+$brand-primary: $luepink;
+
+@import "material-kit.scss";
+@import "full-form.scss";
+
+.navbar {
+	font-size: 1.25rem;
+}
+
+// .has-lue {
+// 	@include bmd-form-color($brand-primary, $brand-primary, $brand-primary, $input-border-color);
+// }
+
+.card {
+	.card-header,
+	&.bg,
+	&.card-rotate.bg .front,
+	&.card-rotate.bg .back{
+		background: linear-gradient(60deg, $luepink-400, $luepink-800);
+
+		.card-title {
+			color: $white;
+			margin: 7px 0;
+		}
+	}
+}
+
+.team-logo {
+	position: relative;
+	width: 100%;
+	margin-bottom: .25rem;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.card-game {
+	.card-title {
+		margin-bottom: .25rem;
+	}
+
+	.card-game-icons-double {
+		margin-bottom: 5%;
+		margin-top: 5%;
+	}
+
+	.card-game-icons-triple {
+		margin-bottom: 9.75%;
+		margin-top: 9.75%;
+	}
+}
+
+.card-luepink {
+	background: linear-gradient(60deg, $luepink-400, $luepink-800);
+}
+
+.footer {
+	color: $white;
+}
+
+.nav-tabs .nav-item {
+	img.material-icons, {
+		height: .9em;
+	}
+
+	.fas.material-icons,
+	.far.material-icons {
+		font-size: 1.25em;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.form-row {
+		.form-group-lg + .form-group:not(.form-group-lg) .form-control {
+			margin-top: 10px;
+		}
+	}
+}
+
+.form-group-lg {
+	.form-control {
+		font-size: 1.5em;
+		height: 38px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.table-collective {
+	th, tr, td {
+		border: none;
+	}
+
+	&.table thead th {
+		vertical-align: middle;
+	}
+
+	thead th,
+	tbody:first-child tr td {
+		&:nth-child(2) {
+			width: 25%;
+		}
+
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(7),
+		&:nth-child(8) {
+			width: 10%;
+		}
+
+		&:nth-child(5) {
+			width: 20%;
+		}
+
+		&:nth-child(6) {
+			width: 15%;
+		}
+	}
+}
+
+.btn-dropzone {
+	background-color: #bcbcbc;
+	border-color: #bcbcbc;
+	width: 100%;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+
+	&.text-primary i.fas,
+	&.text-primary i.far {
+		opacity: .65;
+	}
+
+	i.fas,
+	i.far {
+		line-height: 28px;
+		font-size: 1.25em;
+		z-index: -1;
+	}
+}
+
+.tab-pane {
+	label {
+		margin: 0;
+	}
+
+	input {
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 28px;
+	}
+}
+
+b {
+	font-weight: 500 !important;
+}
+
+.btn-save {
+	i {
+		margin-right: 4px;
+		margin-left: -6px;
+	}
+}
+
+.btn-prev,
+.btn-next {
+	padding: 10px 18px;
+
+	i {
+		font-size: 1.2rem;
+		line-height: 1.2;
+	}
+}
