@@ -6,7 +6,8 @@
 		"build": "next build",
 		"start": "next start",
 		"type-check": "tsc",
-		"lint": "eslint '**/*.{ts,tsx}'"
+		"lint": "eslint '**/*.{ts,tsx}' '.*.js' --ignore-pattern '!/.*.js'",
+		"lint:fix": "eslint '**/*.{ts,tsx}' '.*.js' --ignore-pattern '!/.*.js' --fix"
 	},
 	"dependencies": {
 		"next": "9.0.2",

@@ -1,3 +1,3 @@
 module.exports = {
-	"*.ts?(x)": "eslint"
+	'*.js': 'npx eslint --fix --ignore-pattern \'!/.*.js\''
 };

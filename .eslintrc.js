@@ -30,14 +30,9 @@ module.exports = {
 		}
 	},
 	'rules': {
-		'@typescript-eslint/indent': [
-			'error',
-			'tab'
-		],
-		'@typescript-eslint/semi': [
-			'error',
-			'always'
-		],
+		'@typescript-eslint/indent': [ 'error', 'tab' ],
+		'@typescript-eslint/semi': [ 'error', 'always' ],
+		'quotes': [ 'error', 'single' ],
 		'react/prop-types': 'off'
 	}
 };
