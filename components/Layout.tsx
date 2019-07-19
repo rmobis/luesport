@@ -1,6 +1,8 @@
 import * as React from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
+import Container from '@material-ui/core/Container';
+import Menu from '../components/Menu';
+
 
 interface Props {
 	title?: string;
@@ -10,35 +12,19 @@ const Layout: React.FunctionComponent<Props> = ({
 	children,
 	title = 'This is the default title',
 }): JSX.Element => (
-	<div>
+	<Container maxWidth={false} >
 		<Head>
 			<title>{title}</title>
-			<meta charSet="utf-8" />
-			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		</Head>
 		<header>
-			<nav>
-				<Link href="/">
-					<a>Home</a>
-				</Link>
-				{' '}
-					|{' '}
-				<Link href="/about">
-					<a>About</a>
-				</Link>
-				{' '}
-					|{' '}
-				<Link href="/initial-props">
-					<a>With Initial Props</a>
-				</Link>
-			</nav>
+			<Menu />
 		</header>
 		{children}
 		<footer>
 			<hr />
 			<span>I&apos;m here to stay (Footer)</span>
 		</footer>
-	</div>
+	</Container>
 );
 
 export default Layout;

@@ -1,12 +1,20 @@
-import * as React from 'react';
+/* @jsx jsx */
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { NextPage } from 'next';
+import { jsx } from '@emotion/core';
+import Typography from '@material-ui/core/Typography';
+
+// import Box from '@material-ui/core/Box';
+// import MuiLink from '@material-ui/core/Link';
+
 
 const IndexPage: NextPage = (): JSX.Element => {
 	return (
 		<Layout title="Home | Next.js + TypeScript Example">
-			<h1>Hello Next.js 👋</h1>
+			<Typography variant="h4" component="h1" gutterBottom>
+				Next.js v4-beta example
+			</Typography>
 			<p>
 				<Link href="/about">
 					<a>About</a>
