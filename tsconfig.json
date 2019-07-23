@@ -16,15 +16,22 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
+		"removeComments": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
+		"sourceMap": true,
 		"strict": true,
 		"target": "esnext"
 	},
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"dist",
+		".next",
+		"out",
+		"next.config.js"
 	],
 	"include": [
+		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx"
 	]
