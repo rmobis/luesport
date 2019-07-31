@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App, { Container as NextContainer } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,7 +19,7 @@ class MyApp extends App {
 		const { Component, pageProps } = this.props;
 
 		return (
-			<Container>
+			<NextContainer>
 				<Head>
 					<title>My page</title>
 				</Head>
@@ -28,7 +28,7 @@ class MyApp extends App {
 					<CssBaseline />
 					<Component {...pageProps} />
 				</ThemeProvider>
-			</Container>
+			</NextContainer>
 		);
 	}
 }

@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const IndexPage: NextPage = (): JSX.Element => {
 	return (
-		<Layout title="Home | Next.js + TypeScript Example">
+		<Layout>
 			<Typography variant="h4" component="h1" gutterBottom>
 				Next.js v4-beta example
 			</Typography>
