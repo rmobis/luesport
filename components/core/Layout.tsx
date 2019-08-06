@@ -3,8 +3,8 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Head from 'next/head';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Menu from '../components/Menu';
-import Sidebar from '../components/Sidebar';
+import Menu from 'components/core/Menu';
+import Sidebar from 'components/core/Sidebar';
 
 
 interface Props {

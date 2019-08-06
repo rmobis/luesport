@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
+import { OpenDrawerProps } from 'interfaces';
 
 const drawerWidth = 240;
 
@@ -37,23 +38,18 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 	},
 }));
 
-interface Props {
-	open: boolean;
-	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export default (props: Props): JSX.Element => {
+const Menu: React.FunctionComponent<OpenDrawerProps> = ({ open, setOpen }) => {
 	const classes = useStyles();
 
-	function handleDrawerOpen() {
-		props.setOpen(true);
+	function handleDrawerOpen(): void {
+		setOpen(true);
 	}
 
 	return (
 		<React.Fragment>
 			<AppBar position="fixed"
 				className={clsx(classes.appBar, {
-					[classes.appBarShift]: props.open
+					[classes.appBarShift]: open
 				})}>
 				<Toolbar>
 					<IconButton
@@ -62,7 +58,7 @@ export default (props: Props): JSX.Element => {
 						aria-label="open drawer"
 						onClick={handleDrawerOpen}
 						className={clsx(classes.menuButton, {
-							[classes.hide]: props.open,
+							[classes.hide]: open,
 						})}
 					>
 						<MenuIcon />
@@ -78,3 +74,5 @@ export default (props: Props): JSX.Element => {
 		</React.Fragment>
 	);
 };
+
+export default Menu;

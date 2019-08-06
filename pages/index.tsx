@@ -1,13 +1,8 @@
-/* @jsx jsx */
+import React from 'react';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from 'components/core/Layout';
 import { NextPage } from 'next';
-import { jsx } from '@emotion/core';
 import Typography from '@material-ui/core/Typography';
-
-// import Box from '@material-ui/core/Box';
-// import MuiLink from '@material-ui/core/Link';
-
 
 const IndexPage: NextPage = (): JSX.Element => {
 	return (

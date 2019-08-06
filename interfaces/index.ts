@@ -8,3 +8,8 @@ export interface User {
 	id: number;
 	name: string;
 }
+
+export interface OpenDrawerProps {
+	open: boolean;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}

@@ -3,10 +3,10 @@ import App, { Container as NextContainer } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../components/theme';
+import theme from 'components/core/theme';
 
 class MyApp extends App {
-	componentDidMount() {
+	public componentDidMount(): void {
 		// Remove the server-side injected CSS.
 		const jssStyles = document.querySelector('#jss-server-side');
 
@@ -15,7 +15,7 @@ class MyApp extends App {
 		}
 	}
 
-	render() {
+	public render(): JSX.Element {
 		const { Component, pageProps } = this.props;
 
 		return (

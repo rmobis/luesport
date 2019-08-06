@@ -12,7 +12,12 @@ const handle = app.getRequestHandler();
 
 app.prepare().then((): void => {
 	createServer((req, res): void => {
-		const parsedUrl = parse(req.url!, true);
+		if (!req.url) {
+			console.error('No URL available on request object', req);
+			return;
+		}
+
+		const parsedUrl = parse(req.url, true);
 
 		handle(req, res, parsedUrl);
 	}).listen(port);

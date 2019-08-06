@@ -32,6 +32,10 @@ module.exports = {
 	'rules': {
 		'@typescript-eslint/indent': [ 'error', 'tab' ],
 		'@typescript-eslint/semi': [ 'error', 'always' ],
+		'@typescript-eslint/explicit-function-return-type': ['error', {
+			allowTypedFunctionExpressions: true,
+			allowHigherOrderFunctions: true
+		}],
 		'quotes': [ 'error', 'single' ],
 		'react/prop-types': 'off'
 	}
